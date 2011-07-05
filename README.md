@@ -1,7 +1,7 @@
 CiccWM
-======
+------
 
-CiccWM aim to be a vmii-like dynamic/iling window manager for Windows,
+CiccWM aims to be a vmii-like dynamic/iling window manager for Windows,
 naviagable using the keyboard with ease.
 
 Requirements
@@ -24,7 +24,6 @@ Keys
 * Alt-Shift M - set current column mode to Maxing layout
 * Alt-Shift D - set current column mode to Distributing layout
 * Alt-Shift R - recalculates layout (should not be needed)
-
 * Alt H/J/K/L - cycle to window left/down/up/right
 * Alt-Shift H/J/K/L - shift current window to the respective direction
 
@@ -33,6 +32,7 @@ Status
 
 The current implementation is a rough demo showing that things can work.
 Deficiencies yet:
+
 * no automatic addition of windows to CiccWM management
 * managed windows can't be released
 * CiccWM is not notified if a window gets destroyed
