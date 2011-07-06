@@ -35,10 +35,19 @@ class Window:
 
     def getRect(self):
         """
-        returns (left, top, bottom, right)
+        returns (left, top, right, bottom)
 
         """
         return wgui.GetWindowRect(self.hwnd)
+
+    def getHeight(self):
+        l, t, r, b = self.getRect()
+        return b - t
+
+    def getTitleBarHeight(self):
+        cl, ct, cr, cb = wgui.GetClientRect(self.hwnd)
+        # TODO this is an approximation, not counting borders etc
+        return self.getHeight() - (cb - ct)
 
     def purifyStyle(self):
         self.setStyle(self.getStyle() & ~(wc.WS_CAPTION))

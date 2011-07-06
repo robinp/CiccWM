@@ -124,13 +124,15 @@ class CiccWm:
             self.columns.doLayout()
             return False
 
+        if ev.withAlt and ev.withShift and ev.keyId == ord('S'):
+            self.columns.setActColLayout(layout.StackLayout())
+            self.columns.doLayout()
+            return False
+
         #if ev.withAlt and ev.keyId == ord('K'):
         #    self.columns.cycleUpActCol()
         #    return False
 
-        if ev.withAlt and ev.withShift and ev.keyId == ord('S'):
-            # unmanage
-            return False
         
         if ev.withAlt and ev.withShift and ev.keyId == ord('R'):
             print("Layout")
